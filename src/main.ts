@@ -61,3 +61,15 @@ type Dipendente = {
 // teamSize → Il numero di persone nel team gestito dal Project Manager (può essere null se non ha ancora un team assegnato).
 // budgetGestito → Il totale del budget annuale gestito dal PM (opzionale).
 // stakeholderPrincipali → Un array di stringhe con i nomi dei principali stakeholder con cui il PM collabora (può essere vuoto).
+
+type  Developer = Dipendente & {                                    // estendo Dipendente
+  livelloEsperienza: 'Junior' | 'Mid' | 'Senior',
+  linguaggi?: string[],                                            // opzionale perchè i neo assunti non hanno ancora dei linguaggi assegnati
+  certificazioni: string[]
+};
+
+type ProjectManager = Dipendente & {                               // estendo Dipendente
+  teamSize: number | null,                                        // può essere null se non ha ancora un team assegnato
+  budgetGestito?: number,                                         // opzionale
+  stakeholderPrincipali: string[]
+};
