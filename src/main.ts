@@ -4,13 +4,14 @@
 // Se è un numero: moltiplicalo per due e stampalo
 // Se è un booleano: stampa “Sì” o “No” in base al suo valore
 // In tutti gli altri casi: stampa “Tipo non supportato”
-let dato : unknown; 
-if(typeof dato === 'string'){
+let dato : unknown;                                           // dato di tipo sconosciuto
+
+if(typeof dato === 'string'){                                 // controllo se è una stringa
     console.log(dato.toUpperCase());
-}else if(typeof dato === 'number'){
+}else if(typeof dato === 'number'){                           // controllo se è un numero
     console.log(dato * 2);
-}else if(typeof dato === 'boolean'){
+}else if(typeof dato === 'boolean'){                         // controllo se è un booleano
     console.log(dato ? 'Sì' : 'No');
 }else{
     console.log('Tipo non supportato');
-}
+};
